@@ -1,7 +1,8 @@
 {
     "name": "rabbit-mermaid-cli",
     "version": "0.1.0",
-    "description": "Generate markdown flowcharts of your rabbit topology.",
+    "description":
+        "CLI to generate markdown flowcharts of your rabbitmq topology.",
     "homepage": "",
     "author": {
         "name": "David Salas",
@@ -14,17 +15,22 @@
         "rabbit rabbitmq amqp topology charts flowchart mermaid markdown gitlab github "
     ],
     "devDependencies": {
+        "child_process": "^1.0.2",
         "coveralls": "^3.0.0",
         "eslint": "^4.19.1",
         "eslint-config-prettier": "^2.9.0",
         "eslint-config-xo": "^0.20.1",
         "eslint-plugin-prettier": "^2.6.0",
+        "fs-readdir-recursive": "^1.1.0",
         "husky": "^0.14.3",
         "jest": "^22.0.6",
         "lint-staged": "^6.1.1",
+        "lodash": "^4.17.5",
         "nsp": "^2.8.0",
+        "output-file-sync": "^2.0.1",
         "prettier": "^1.12.0",
-        "pretty-quick": "^1.4.1"
+        "pretty-quick": "^1.4.1",
+        "rimraf": "^2.6.2"
     },
     "engines": {
         "npm": ">= 4.0.0"
@@ -35,6 +41,8 @@
         "pretest": "eslint .",
         "precommit": "lint-staged",
         "test": "jest --coverage",
+        "test:debug":
+            "node --inspect --inspect-brk ./node_modules/.bin/jest --runInBand",
         "test:watch": "jest --watch"
     },
     "lint-staged": {
@@ -42,10 +50,13 @@
         "*.{js,css,md,json}": ["prettier --write lib/**/*.js", "git add"]
     },
     "eslintConfig": {
-        "extends": ["xo", "prettier"],
+        "extends": ["prettier"],
         "env": {
             "jest": true,
             "node": true
+        },
+        "parserOptions": {
+            "ecmaVersion": 6
         }
     },
     "repository": "https://github.com/davidlivingrooms/rabbit-mermaid-cli.git",
@@ -54,6 +65,7 @@
     },
     "license": "MIT",
     "dependencies": {
-        "capitalize": "^1.0.0"
+        "capitalize": "^1.0.0",
+        "commander": "^2.15.1"
     }
 }

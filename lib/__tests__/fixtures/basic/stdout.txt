@@ -1,0 +1,8 @@
+graph LR
+subgraph Images
+Images(("Images<br/>(direct)"))
+Images --routing_key=images.archive--> archiver1("archiver1")
+Images --routing_key=images.archive--> archiver2("archiver2")
+Images --routing_key=images.crop--> cropper("cropper")
+Images --routing_key=images.resize--> resizer("resizer")
+end
