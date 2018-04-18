@@ -1,9 +1,9 @@
 # rabbit-mermaid-cli [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 
-> CLI to generate markdown flowcharts of your rabbitmq topology.
+> CLI to generate markdown dependency graphs of your rabbitmq topology.
 
-The cli for rabbit-mermaid. It takes your rabbitmq topology files and turns them into
-markdown flowcharts. Direct, fanout, and topic-based exchanges are supported.
+The cli for rabbit-mermaid :rabbit::fish:. It takes your rabbitmq topology files and turns them into
+markdown compatible dependency graphs. Direct, fanout, and topic-based exchanges are supported.
 
 ## Installation
 
@@ -14,8 +14,25 @@ npm install -g rabbit-mermaid-cli
 ## Usage
 
 ```sh
-rabbit-mermaid-cli ./definitions.json
+rabdg ./definitions.json
 ```
+
+Will output
+
+```
+graph LR
+subgraph JPEG
+JPEG(("JPEG<br/>(direct)"))
+JPEG --routing_key=images.archive--> jarchiver1("jarchiver1")
+JPEG --routing_key=images.archive--> jarchiver2("jarchiver2")
+JPEG --routing_key=images.crop--> jcropper("jcropper")
+JPEG --routing_key=images.resize--> jresizer("jresizer")
+end
+```
+
+When put into a markdown file that supports [mermaid](https://mermaidjs.github.io/) will generate
+
+![test](ExampleDG.png)
 
 ## License
 
