@@ -70,6 +70,6 @@
         "rabbit-mermaid": "^0.1.0"
     },
     "bin": {
-        "rabdg": "./bin/babel.js"
+        "rabdg": "./bin/rabdg.js"
     }
 }
