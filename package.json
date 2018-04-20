@@ -67,7 +67,7 @@
     "dependencies": {
         "capitalize": "^1.0.0",
         "commander": "^2.15.1",
-        "rabbit-mermaid": "^0.1.0"
+        "rabbit-mermaid": "^0.2.0"
     },
     "bin": {
         "rabdg": "./bin/rabdg.js"

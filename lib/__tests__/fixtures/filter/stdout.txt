@@ -1,0 +1,8 @@
+graph LR
+subgraph JPEG
+JPEG(("JPEG<br/>(direct)"))
+JPEG --routing_key=images.archive--> jarchiver1("jarchiver1")
+JPEG --routing_key=images.archive--> jarchiver2("jarchiver2")
+JPEG --routing_key=images.crop--> jcropper("jcropper")
+JPEG --routing_key=images.resize--> jresizer("jresizer")
+end
