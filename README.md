@@ -15,7 +15,7 @@ npm install -g rabbit-mermaid-cli
 
 definitions.json
 
-```json
+```js
 {
     exchanges: [
         {
