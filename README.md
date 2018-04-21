@@ -2,7 +2,7 @@
 
 > CLI to generate markdown graphs of your rabbitmq topology.
 
-The cli for rabbit-mermaid :rabbit::fish:. It takes your rabbitmq topology files and turns them into
+The cli for (rabbit-mermaid)[https://github.com/davidlivingrooms/rabbit-mermaid] :rabbit::fish:. It takes your rabbitmq topology files and turns them into
 markdown compatible dependency graphs. Direct, fanout, and topic-based exchanges are supported.
 
 ## Installation
@@ -98,6 +98,7 @@ definitions.json
 ```sh
 rabdg -f ./definitions.json
 
+/** Output:
 graph LR
 subgraph Images
 Images(("Images<br/>(direct)"))
@@ -106,6 +107,7 @@ Images --routing_key=images.archive--> archiver2("archiver2")
 Images --routing_key=images.crop--> cropper("cropper")
 Images --routing_key=images.resize--> resizer("resizer")
 end
+**/
 ```
 
 When put into a markdown file that supports [mermaid](https://mermaidjs.github.io/) will generate
