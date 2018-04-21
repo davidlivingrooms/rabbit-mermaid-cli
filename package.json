@@ -40,7 +40,7 @@
         "prepublishOnly": "nsp check",
         "pretest": "eslint .",
         "precommit": "lint-staged",
-        "test": "jest --coverage",
+        "test": "jest --coverage --runInBand",
         "test:debug":
             "node --inspect --inspect-brk ./node_modules/.bin/jest --runInBand",
         "test:watch": "jest --watch"
@@ -67,7 +67,7 @@
     "dependencies": {
         "capitalize": "^1.0.0",
         "commander": "^2.15.1",
-        "rabbit-mermaid": "^0.2.0"
+        "rabbit-mermaid": "^0.4.0"
     },
     "bin": {
         "rabdg": "./bin/rabdg.js"
