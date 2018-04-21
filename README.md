@@ -1,8 +1,8 @@
-# rabbit-mermaid-cli [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# rabbit-mermaid-cli [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 
 > CLI to generate markdown graphs of your rabbitmq topology.
 
-The cli for [rabbit-mermaid](https://github.com/davidlivingrooms/rabbit-mermaid) :rabbit::fish:. It takes your rabbitmq topology files and turns them into
+The cli for [rabbit-mermaid](https://github.com/davidlivingrooms/rabbit-mermaid) :rabbit::fish:. Turn your rabbitmq topology files into
 markdown compatible dependency graphs. Direct, fanout, and topic-based exchanges are supported.
 
 ## Installation
