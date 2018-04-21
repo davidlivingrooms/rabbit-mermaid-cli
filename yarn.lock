@@ -3133,9 +3133,9 @@ qs@~6.5.1:
   version "6.5.1"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.1.tgz#349cdf6eef89ec45c12d7d5eb3fc0c870343a6d8"
 
-rabbit-mermaid@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/rabbit-mermaid/-/rabbit-mermaid-0.4.0.tgz#8b30193f60917a555dbab78f103f398f19c9d772"
+rabbit-mermaid@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/rabbit-mermaid/-/rabbit-mermaid-0.4.1.tgz#933b837d8a04013308a115a78775d5ac0a4423ff"
   dependencies:
     capitalize "^1.0.0"
 
