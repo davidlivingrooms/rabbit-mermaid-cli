@@ -1,6 +1,6 @@
 {
     "name": "rabbit-mermaid-cli",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description":
         "CLI to generate markdown flowcharts of your rabbitmq topology.",
     "homepage": "",
@@ -9,8 +9,7 @@
         "email": "davidlivingrooms@gmail.com",
         "url": ""
     },
-    "files": ["lib"],
-    "main": "lib/index.js",
+    "main": "./lib/rabdg.js",
     "keywords": [
         "rabbit rabbitmq amqp topology charts flowchart mermaid markdown gitlab github "
     ],
