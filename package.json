@@ -1,6 +1,6 @@
 {
     "name": "rabbit-mermaid-cli",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description":
         "CLI to generate markdown flowcharts of your rabbitmq topology.",
     "homepage": "",
